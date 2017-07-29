@@ -648,7 +648,7 @@ public class TopologyInstance {
     public Map<Link,Integer> initLinkCostMap() {
         Map<Link, Integer> linkCost = new HashMap<Link, Integer>();
         int tunnel_weight = portsWithLinks.size() + 1;
-
+        
         switch (TopologyManager.getPathMetricInternal()){
         case HOPCOUNT_AVOID_TUNNELS:
             log.debug("Using hop count with tunnel bias for metrics");
@@ -1008,8 +1008,8 @@ public class TopologyInstance {
     }
 
     private List<Path> yens(DatapathId src, DatapathId dst, Integer K, Archipelago aSrc, Archipelago aDst) {
-
-        log.debug("YENS ALGORITHM -----------------");
+        
+    	log.debug("YENS ALGORITHM -----------------");
         log.debug("Asking for paths from {} to {}", src, dst);
         log.debug("Asking for {} paths", K);
 
